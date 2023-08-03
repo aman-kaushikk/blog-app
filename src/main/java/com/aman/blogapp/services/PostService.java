@@ -2,6 +2,7 @@ package com.aman.blogapp.services;
 
 import com.aman.blogapp.entities.Post;
 import com.aman.blogapp.payload.PostDto;
+import com.aman.blogapp.payload.PostResponse;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,9 +21,11 @@ public interface PostService {
     //get all posts
 
 //    PostResponse getAllPost(Integer pageNumber,Integer pageSize,String sortBy,String sortDir);
-    List<Post> getAllPost();
+//    List<PostDto> getAllPost();
 
     //get single post
+
+    PostResponse getAllPost(Integer pageNumber, Integer pageSize, String sortBy, String sortDir);
 
     PostDto getPostById(Integer postId);
 
